@@ -1,0 +1,37 @@
+<div class="posts-container" [class.embedded] = "isEmbedded">
+    <div class="new-post-container" *ngIf="!isEmbedded">
+        <p>Add new post</p>
+        <br>
+        <input [(ngModel)]="newPostPlaceholder.title" placeholder="Title" required>
+        <br>
+        <input [(ngModel)]="newPostPlaceholder.body" placeholder="Body" required>
+        <br>
+        <br>
+        <div class="btn" (click)="addNewPost()">Add</div>
+    </div>
+    <ul>
+        <li *ngFor="let post of posts | slice:0:limit; let i=index">
+            <h1>{{post.title}}</h1>
+            <p>{{post.body}}</p>
+            <div class="action-bar">
+                <div class="btn" (click)="deletePost(post)">Delete</div>
+                <div class="btn" (click)="initEdit(post)">Edit</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="popUpWrapper" *ngIf="showPopUp">
+    <div class="popUpContainer">
+            <div class="edit-post-container" *ngIf="!isEmbedded">
+            <p>Edit post</p>
+            <br>
+            <input [(ngModel)]="postToEdit.title" placeholder="Title" required>
+            <br>
+            <input [(ngModel)]="postToEdit.body" placeholder="Body" required>
+            <br>
+            <br>
+            <div class="btn" (click)="editPost()">Edit</div>
+            <div class="btn" (click)="cancelEditPost()">Cancel</div>
+        </div>
+    </div>
+</div>

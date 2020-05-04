@@ -1,0 +1,12 @@
+<div class="photos-container">
+    <ul class="list">
+        <cdk-virtual-scroll-viewport style="height: calc(100vh - 220px)" itemSize="50" >
+            <ng-container *cdkVirtualFor="let photo of photos | slice:0:limit; let i=index">
+                <li>
+                    <img [src]="photo.thumbnailUrl"/>
+                    <p>{{photo.title}}</p>
+                </li>
+            </ng-container>
+        </cdk-virtual-scroll-viewport>
+    </ul>
+</div>

@@ -1,0 +1,14 @@
+.side-menu-container {
+    width: 15%;
+    position: absolute;
+    background: goldenrod;
+    height: 100%;
+}
+.content-wrapper {
+    margin-left: 15%;
+    min-height: calc(100vh - 200px);
+    background: green;
+}
+.main-container {
+    position: relative;
+}

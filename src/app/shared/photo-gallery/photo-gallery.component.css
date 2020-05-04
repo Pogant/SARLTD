@@ -1,0 +1,17 @@
+.photos-container {
+    height: 100%;
+    width: 100%;
+    background: yellow;
+}
+.photos-container  ul {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    list-style: none;
+}
+.photos-container ul li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}

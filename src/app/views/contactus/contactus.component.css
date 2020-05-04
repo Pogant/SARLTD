@@ -1,0 +1,9 @@
+.container {
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    background: #5959ff;
+}
+.wrapper {
+    width: 167px;
+    margin: 0 auto;
+}

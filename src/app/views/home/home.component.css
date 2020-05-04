@@ -1,0 +1,11 @@
+.left-column, .right-column {
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    float: left;
+}
+.container {
+    height: calc(100vh - 200px);
+    background: red;
+}

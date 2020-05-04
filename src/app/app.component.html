@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="main-container">
+    <div class="side-menu-container">
+      <app-menu [isVertical]='true' [verticalAlign]='verticalAlign'></app-menu>
+    </div>
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+</div>
+<app-footer></app-footer>
